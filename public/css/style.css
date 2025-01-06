@@ -1,0 +1,137 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    min-height: 5rem; /* Changed height to min-height for flexibility */
+}
+
+.container-fluid {
+    overflow: visible;
+}
+
+.fa-regular {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.dropdown-menu {
+    margin-top: 0.5rem; /* Adds space between dropdown toggle and menu */
+    z-index: 1050; /* Ensures dropdown appears above other elements */
+}
+
+.dropdown-item:hover {
+    background-color: #fe424d;
+    color: #ffffff;
+}
+
+.f-info a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+    color: #222222;
+}
+
+.f-info {
+    height: 6rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.f-info-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.f-info-socials i {
+    margin-right: 1.2rem;
+}
+
+.f-info-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.f-info-links a {
+    margin-right: 1rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none !important;
+}
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.listing_link {
+    text-decoration: none !important;
+    color: #222222;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Additional Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding/margin are calculated properly */
+}
+
+/* Media Query for Responsive Adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

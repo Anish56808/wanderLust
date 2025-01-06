@@ -1,0 +1,37 @@
+<% layout("/layouts/boilerplate") %>
+<body style="text-align: center; height: 100%;">
+    <h3 style="text-align: center;">Listing Details:</h3>
+    <ul style="width: 50%; text-align: left; margin: auto;">
+        <li style="list-style-type: none;">
+            <img 
+                src="<%= listing.image.url %>" 
+                class="card-img-top" 
+                alt="listing_image" 
+                style="height: 17rem !important;
+                "
+            >
+        </li>
+        <li><%= listing.title %></li>
+        <li><%= listing.description %></li>
+        <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
+        <li><%= listing.location %></li>
+        <li><%= listing.country %></li>
+    </ul>
+    <br>
+    <!-- Grouping the link and button into a flex container -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+        <a href="/listings/<%= listing._id %>/edit" 
+           style="display: inline-block; text-decoration: none; color: blue; border: 1px solid blue; padding: 0.5rem 1rem; border-radius: 5px;"
+        >
+            Edit this Listing
+        </a>
+        <form action="/listings/<%=listing._id%>?_method=DELETE" method="POST" style="margin: 0;">
+            <button 
+                type="submit" 
+                style="display: inline-block; background-color: red; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px;"
+            >
+                Delete this Listing
+            </button>
+        </form>
+    </div>
+</body>
