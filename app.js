@@ -19,10 +19,12 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
-let port=8080;
-app.listen(8080,()=>{
+let port=3000;
+app.listen(port,()=>{
     console.log("sever is listening to port",port);
 });
+
+
 
 // data base connection
 let url= "mongodb://127.0.0.1:27017/wanderlust" ;
@@ -35,6 +37,9 @@ main()
 }).catch((err)=>{
     console.log(err);
 });
+
+
+
 
 //test databse 
 app.get("/testDB", wrapAsync(async (req,res)=>{
@@ -55,6 +60,9 @@ app.get("/testDB", wrapAsync(async (req,res)=>{
 app.get("/test",(req,res)=>{
      res.send("this app is listening");
 });
+
+
+
 
 //home route
 app.get("/",(req,res)=>{
